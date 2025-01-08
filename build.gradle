@@ -1,0 +1,18 @@
+buildscript {
+    ext {
+        compose_version = '1.5.0'  // Correct version for Compose
+        kotlin_version = '1.9.0'   // Updated to Kotlin 1.9.0
+    }
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:8.0.2'  // Updated Android Gradle Plugin (AGP)
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"  // Updated Kotlin plugin
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
